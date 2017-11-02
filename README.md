@@ -2,7 +2,10 @@
 
 # Description
 
-Starts a video upon a remote triggered signal delivered by UDP.
+Starts a video upon receiving a remote signal delivered by UDP: Use
+[info-beamer hosted](https://info-beamer.com/hosted) to easily deploy
+the video to any number of Pis. Then trigger simultaneous video playback
+from another machine by sending a UDP package to each Pi.
 
 # Installation
 
@@ -36,5 +39,6 @@ This will trigger your video. If you want to abort the current playback, use
 $ echo root/abort: > /dev/udp/192.168.1.XXX/4444
 ```
 
-You can of course use any real programming language to send those UDP packets
-instead of using bash.
+You can of course use any other network capable programming language
+to send those UDP packets instead of using bash. And there's no reason
+to just use a single Pi: The more, the better :-)
