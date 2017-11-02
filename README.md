@@ -24,16 +24,16 @@ Starts a video upon a remote triggered signal delivered by UDP.
 - Find out the IP address of your device. You can see the
   local IP address of each device on the device detail page.
 
-From another machine, if bash is used as a shell:
+From another machine, if bash is used as a shell (of course replace the IP with the IP of your device):
 
 ```
-$ echo root/trigger: > /dev/udp/192.168.1.135/4444
+$ echo root/trigger: > /dev/udp/192.168.1.XXX/4444
 ```
 
 This will trigger your video. If you want to abort the current playback, use
 
 ```
-$ echo root/abort: > /dev/udp/192.168.1.135/4444
+$ echo root/abort: > /dev/udp/192.168.1.XXX/4444
 ```
 
 You can of course use any real programming language to send those UDP packets
