@@ -16,7 +16,7 @@ from another machine by sending a UDP package to each Pi.
   put in `0.0.0.0`. This will make the info-beamer process
   running on the device reachable from outside. See also the
   [documentation](https://info-beamer.com/doc/device-configuration#exposeinfobeamerports).
-  If you skip this step, the following commands *wont* work!
+  If you skip this step, the following commands *won't* work!
 - If your network has DHCP but doesn't guarantee stable IP addresses,
   you might want to statically configure your network. See the
   [documentation](https://info-beamer.com/doc/device-configuration#staticnetworkconfiguration)
