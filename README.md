@@ -21,7 +21,7 @@ from another machine by sending a UDP package to each Pi.
   you might want to statically configure your network. See the
   [documentation](https://info-beamer.com/doc/device-configuration#staticnetworkconfiguration)
   for that.
-- Import this package (click the orange button above)
+- Import this package (click the button above)
 - Create a setup based on this package and configure the video you want to play.
 - Assign the setup to your device
 - Find out the IP address of your device. You can see the
@@ -33,7 +33,9 @@ From another machine, if bash is used as a shell (of course replace the IP with 
 $ echo root/trigger: > /dev/udp/192.168.1.XXX/4444
 ```
 
-This will trigger your video. If you want to abort the current playback, use
+This will trigger your video. Additional triggers while the video is playing are ignored and
+won't restart the video. If you want to abort the current playback (and then later restart it),
+use
 
 ```
 $ echo root/abort: > /dev/udp/192.168.1.XXX/4444
@@ -42,3 +44,14 @@ $ echo root/abort: > /dev/udp/192.168.1.XXX/4444
 You can of course use any other network capable programming language
 to send those UDP packets instead of using bash. And there's no reason
 to just use a single Pi: The more, the better :-)
+
+# Other uses
+
+Right now this package requires a custom UDP packet to trigger the video and
+only one video can be triggered. It wouldn't be too difficult to support the
+[OSC protocol](https://en.wikipedia.org/wiki/Open_Sound_Control) as well. This
+would allow this package to integrate into existing AV solutions.
+[Get in contact](https://info-beamer.com/contact) if you're interested in this.
+
+Of course you can also [open a ticket](https://github.com/info-beamer/package-video-trigger/issues)
+if you have other suggestions.
