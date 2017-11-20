@@ -1,6 +1,6 @@
 {
     "name": "Remote Triggered Video Player",
-    "author": "Florian Wesch <fw@dividuum.de>",
+    "author": "Florian Wesch <fw@info-beamer.com>",
     "desc": "Start video on demand",
     "repository": "https://github.com/info-beamer/package-video-trigger"
 }
